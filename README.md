@@ -15,10 +15,9 @@ Cette première version du projet marque le début du développement de notre pl
 - **Tableau de bord des biens actifs et archivés**
 - **Ajout et modification de biens immobiliers**
 - **Ajout de locataires à un bien**
-- **Calcul et affichage des loyers avec charges**
 - **Archivage et restauration de lots**
 - **Chatbot intégré** pour assistance rapide avec réponses automatisées
-- **Pages d’aide pour guider les utilisateurs dans l’investissement locatif**
+- **Pages d’aide pour guider les utilisateurs dans l’investissement**
 - **Design responsive** pour une utilisation sur ordinateur, tablette et mobile
 
 Des fonctionnalités supplémentaires sont prévues dans les prochaines étapes du développement, notamment :
