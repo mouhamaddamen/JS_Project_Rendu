@@ -68,12 +68,12 @@ Des fonctionnalités supplémentaires sont prévues dans les prochaines étapes 
 
 ## 👥 Membres du Groupe
 
-- **Nom 1** – Développement back-end / base de données
-- **Nom 2** – Intégration front-end / UI/UX
-- **Nom 3** – Authentification / Sécurité
-- **Nom 4** – Documentation / chatbot / gestion projet
+- **Mouhamad Damen** – Développement back-end / base de données / Authentification / Sécurité / chatbot
+- **Zayd ZEGHIMI** – Page d'acceuil / Développement front-end / Page profile
+- **Paul JEANNIN** – Pages de propriétés (avec l'archives etc..) / base de données
+- **Arthur LOUF** – Front-end / Pages de propriétés (avec l'archives etc..)
 
-*(À adapter avec les vrais prénoms bien sûr 😄)*
+*Nous nous sommes aidé les uns les autres sur nos pages ces rôles et pages restes à titre indicatif😄*
 
 ---
 
