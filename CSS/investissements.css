@@ -1,0 +1,139 @@
+/* === Général === */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #f7f4e3;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+}
+
+/* === Page Investment Ideas === */
+.investment-intro {
+    padding: 60px 40px;
+    background: 
+        linear-gradient(to top, #f7f4e3 0%, transparent 15%),   /* Bas */
+        linear-gradient(to left, #f7f4e3 0%, transparent 15%),   /* Droit */
+        #f7f5e9; /* Couleur principale de fond */
+}
+
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.intro-image img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.intro-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.intro-text h4 {
+    color: #4CAF50;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* === Investment List === */
+.investment-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.investment-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin: 100px auto;
+    max-width: 1200px;
+    padding: 0 40px;
+    flex-wrap: wrap;
+}
+
+.investment-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.investment-image img {
+    width: 350px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 1);
+    transition: transform 0.3s ease;
+}
+
+.investment-image img:hover {
+    transform: scale(1.02);
+}
+
+.investment-description {
+    text-align: left;
+    padding: 20px 0;
+    max-width: 600px;
+}
+
+.investment-description h3 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.investment-description p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.investment-label {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #4CAF50;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* === Animation scroll === */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.reverse {
+    transform: translateX(80px);
+}
+
+.animate-on-scroll:not(.reverse) {
+    transform: translateX(-80px);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}

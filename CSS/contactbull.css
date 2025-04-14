@@ -1,0 +1,82 @@
+/* ---------------------- contactnous ------------------*/
+
+#contactnous {
+    position: fixed;
+    bottom: 20px; /* Toujours en bas sauf si le footer est atteint */
+    left: 30px;
+    display: inline-block;
+    z-index: 1000;
+}
+
+#contactnous img {
+    border-radius: 30px;
+    width: 60px;
+    transition: border-radius 1s, width 0.3s;
+}
+
+#contactnous img:hover {
+    animation: none;
+    border-radius: 40px;
+    width: 80px;
+}
+
+#contactnous {
+    bottom: max(30px, calc(100vh - 95vh));
+}
+/* Style de la boîte de chat */
+#chat-popup {
+    position: fixed;
+    bottom: 80px;
+    left: 120px;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    font-size: 16px;
+    color: black;
+    width: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#chat-popup.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#chat-history {
+    margin-bottom: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#chat-questions button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+}
+
+#chat-questions button:hover {
+    background-color: #e0e0e0;
+}
+
+.user-message {
+    font-weight: bold;
+    color: blue;
+}
+
+.bot-message {
+    color: green;
+}

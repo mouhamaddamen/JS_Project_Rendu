@@ -1,0 +1,152 @@
+html, body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: #f7f4e3;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+h1, h2 { font-family: 'Playfair Display', serif; }
+
+/* Effet sur le bouton Profile */
+.profile-btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.profile-btn:hover {
+    background-color: #1a5e12;
+    transform: scale(1.05);
+}
+
+
+
+/* Effet de survol sur les liens de la navbar */
+.nav-link {
+    position: relative;
+    color: #B57948 !important;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: #B57948;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #9F8868 !important;
+    transform: translateY(-2px); /* Légère translation vers le haut */
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Styles pour la Sidebar */
+.more-about-container {
+    position: relative;
+    display: inline-block;
+}
+
+body, html {
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.hero img {
+position: absolute;
+top: 0; /* Assure que l’image commence tout en haut */
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+
+
+
+.sidebar {
+position: absolute;
+top: calc(100% ); /* Descend la liste de 20px */
+left: 50%;
+transform: translateX(-50%);
+width: 250px;
+background-color: #f7f4e3;
+color: #B57948;
+display: none;
+transition: all 0.3s ease;
+z-index: 1000;
+}
+
+.more-about-container:hover .sidebar {
+    display: block;   
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #B57948;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: rgba(229, 232, 235, 0.3);
+}
+
+
+
+/* Réponse pour petits écrans */
+@media (max-width: 768px) {
+    
+
+    .sidebar {
+        width: 200px;
+    }
+}
+
+.view-services-btn {
+transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view-services-btn:hover {
+background-color: #8f5a30; /* Couleur plus foncée au survol */
+transform: scale(1.05); /* Zoom léger */
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre au survol */
+}
+
+/* Animation de fondu pour les sections */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+

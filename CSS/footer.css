@@ -1,0 +1,34 @@
+/* FOOTER - scoping total à .page-footer */
+
+.page-footer {
+    background-color: #f7f4e3;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-footer a {
+    color: #29720E;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: text-decoration 0.3s ease;
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
+}
+
+.page-footer .footer-contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .page-footer .footer-contact-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

@@ -1,1 +1,4 @@
-# JS_Project_Rendu
+# JS_Project
+
+
+Appli de gestion immobilier

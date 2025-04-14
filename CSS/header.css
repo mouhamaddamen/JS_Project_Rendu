@@ -1,0 +1,117 @@
+/* Assurer que le header prenne toute la largeur de la page */
+header {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f4e3;
+    width: 100%; /* Pour que le header prenne toute la largeur */
+    padding: 20px 30px; /* Padding plus large pour rendre le header plus grand */
+    box-sizing: border-box; /* Assurer que le padding ne dépasse pas la largeur */
+}
+
+/* Container du nav : flexbox pour aligner correctement les éléments */
+header nav {
+    display: flex;
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center;
+    width: 100%; /* Le nav doit aussi prendre toute la largeur du header */
+    padding: 0; /* Enlever le padding supplémentaire */
+}
+
+/* Logo du header */
+header h1 {
+    font-size: 28px; /* Augmenter la taille du logo */
+    color: #000000;
+    margin: 0;
+}
+
+/* Liens de la navbar */
+header .nav-link {
+    color: #B57948;
+    margin-right: 20px; /* Espacement entre les liens */
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: left;
+    padding: 5px 0; /* Padding pour les liens */
+}
+
+/* Sidebar */
+header .more-about-container {
+    position: relative;
+    display: inline-block;
+}
+
+header .sidebar {
+    position: absolute;
+    top: calc(100%);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    background-color: #f7f4e3;
+    color: #B57948;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+header .more-about-container:hover .sidebar {
+    display: block;
+}
+
+header .sidebar a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #B57948;
+    transition: background-color 0.3s ease;
+}
+
+header .sidebar a:hover {
+    background-color: rgba(229, 232, 235, 0.3);
+}
+
+/* Pour éviter le centrage du texte sur la page investissement */
+header h1, header .nav-link, header .profile-btn {
+    text-align: left;
+}
+
+header .nav-link:hover {
+    color: #9F8868;
+    transform: translateY(-2px);
+}
+
+/* Style pour le bouton du profile */
+header .profile-btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #29720E;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+header .profile-btn:hover {
+    background-color: #1a5e12;
+    transform: scale(1.05);
+}
+
+/* Pour que la navbar ne soit pas centrée, on s'assure que tout est bien à gauche */
+header .nav-link, header .profile-btn {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Réponse pour petits écrans */
+@media (max-width: 768px) {
+    header .sidebar {
+        width: 200px;
+    }
+
+    /* Adapter les espacements et alignements en fonction de la taille de l'écran */
+    header nav {
+        flex-direction: column;
+        align-items: flex-start; /* Aligner les éléments à gauche */
+        padding: 10px 15px;
+    }
+
+    header h1 {
+        font-size: 24px; /* Taille du logo plus petite pour les petits écrans */
+    }
+}
