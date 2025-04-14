@@ -7,7 +7,7 @@ echo '
 <header>
     <nav class="fixed top-0 w-full z-50 bg-white shadow-md flex justify-between items-center px-8 py-4 border-b" style="background-color: #f7f4e3;">
         <h1 class="text-xl" style="color: #000000;">
-            PLATEFORME DE GESTION IMMOBILIÈRE
+            IMVEST
         </h1>
         <div class="flex items-center space-x-6 text-sm">
             <a href="' . $path_suffix . 'index.php" class="nav-link">Home</a>
