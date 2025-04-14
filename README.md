@@ -70,7 +70,7 @@ Des fonctionnalités supplémentaires sont prévues dans les prochaines étapes 
 - **Mouhamad Damen** – Développement back-end / base de données / Authentification / Sécurité / chatbot
 - **Zayd ZEGHIMI** – Page d'acceuil / Développement front-end / Page profile
 - **Paul JEANNIN** – Pages de propriétés (avec l'archives etc..) / base de données
-- **Arthur LOUF** – Front-end / Pages de propriétés (avec l'archives etc..)
+- **Arthur LOUF** – Front-end (un peu partout) / Pages de propriétés (avec l'archives etc..)
 
 *Nous nous sommes aidé les uns les autres sur nos pages ces rôles et pages restes à titre indicatif😄*
 
