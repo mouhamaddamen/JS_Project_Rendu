@@ -67,9 +67,9 @@ Des fonctionnalités supplémentaires sont prévues dans les prochaines étapes 
 
 ## 👥 Membres du Groupe
 
-- **Mouhamad Damen** – Développement back-end / base de données / Authentification / Sécurité / chatbot / rassemblé les pages (nettoyage des codes, réorganisation des fichiers/dossiers)
+- **Mouhamad Damen** – Développement back-end / base de données / Authentification / Sécurité / chatbot / rassemblé les pages (nettoyage des codes, réorganisation des fichiers/dossiers/codes)
 - **Zayd ZEGHIMI** – Page d'acceuil / Développement front-end / Page profile
-- **Paul JEANNIN** – Pages de propriétés (avec l'archives etc..) / base de données
+- **Paul JEANNIN** – Pages de propriétés (avec l'archives etc..) / base de données / réorganisation des fichiers/dossiers/codes
 - **Arthur LOUF** – Front-end (un peu partout) / Pages de propriétés (avec l'archives etc..)
 
 *Nous nous sommes aidé les uns les autres sur nos pages ces rôles et pages restes à titre indicatif😄*
