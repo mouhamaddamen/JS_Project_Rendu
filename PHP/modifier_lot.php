@@ -28,7 +28,7 @@ $photosExistantes = !empty($lot['photos']) ? explode(',', $lot['photos']) : [];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Lot - <?= htmlspecialchars($lot['identifiant']) ?></title>
-    <link rel="stylesheet" href="../CSS/property.css">
+    <link rel="stylesheet" href="../CSS/lot.css">
 </head>
 <body>
 <?php include('header.php'); ?>
@@ -210,7 +210,7 @@ $photosExistantes = !empty($lot['photos']) ? explode(',', $lot['photos']) : [];
             <!-- Boutons de soumission -->
             <div class="form-group">
                 <button type="submit" name="submit" class="btn-primary">Save changes</button>
-                <button type="button" class="btn-secondary" onclick="window.location.href='gestion_lots.php'">Cancel</button>
+                <button type="button" class="btn-secondary" onclick="window.location.href='properties.php'">Cancel</button>
             </div>
         </form>
     </div>

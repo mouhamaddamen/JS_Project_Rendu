@@ -1,240 +1,292 @@
-/* Import des polices globales pour correspondre à index.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap');
+:root {
+    --primary: #1a5e12; /* Couleur principale verte */
+    --secondary: #B57948; /* Couleur secondaire marron */
+    --light: #f7f4e3; /* Fond clair */
+    --dark: #333;
+    --success: #28a745;
+    --danger: #dc3545;
+    --border-color: #e0dcc9;
+    --shadow: 0 0 20px rgba(0,0,0,0.1);
+}
 
 /* ==================== */
-/* Base générale alignée avec index.css */
+/* Styles généraux */
 /* ==================== */
-body {
-    margin: 0;
-    padding: 0;
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
     font-family: 'Poppins', sans-serif;
-    background-color: #f7f4e3;
-    color: #333;
 }
 
 h1, h2 {
     font-family: 'Playfair Display', serif;
-    color: #333;
+    color: var(--primary);
 }
 
-/* ==================== */
-/* Conteneur principal */
-/* ==================== */
-#property-page .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-#property-page h1 {
+h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
 }
 
-#property-page h2 {
-    border-bottom: 2px solid #28a745;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+h2 {
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 /* ==================== */
 /* Section loc_choice */
 /* ==================== */
-#property-page .loc_choice {
+.loc_choice {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100px;
     background-color: white;
-    padding: 0 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0 2rem;
+    box-shadow: var(--shadow);
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+    border-radius: 10px;
 }
 
-#property-page .loc_choice .title {
-    font-size: 24px;
+.loc_choice .title {
+    font-size: 1.5rem;
     font-weight: bold;
     flex: 1;
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
 }
 
-#property-page .loc_choice .buttons {
+.loc_choice .buttons {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
     flex: 1;
     justify-content: center;
 }
 
-#property-page .loc_choice .buttons button {
-    padding: 10px 20px;
+.loc_choice .buttons button {
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
-    background-color: #f8f8f8;
-    color: #333;
-    font-size: 16px;
+    background-color: var(--light);
+    color: var(--dark);
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-#property-page .loc_choice .buttons button.active {
-    background-color: #28a745;
+.loc_choice .buttons button.active {
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.loc_choice .buttons button:hover {
+    background-color: var(--secondary);
     color: white;
 }
 
-#property-page .loc_choice .buttons button:hover {
-    background-color: #ddd;
-}
-
-#property-page .loc_choice .new-location {
-    padding: 10px 20px;
+.loc_choice .new-location {
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
-    background-color: #28a745;
+    background-color: var(--primary);
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     margin-left: auto;
 }
 
-#property-page .loc_choice .new-location:hover {
-    background-color: #218838;
+.loc_choice .new-location:hover {
+    background-color: #1a5e12;
+    transform: translateY(-2px);
 }
 
 /* ==================== */
 /* Section loc_tab (Tableau) */
 /* ==================== */
-#property-page .loc_tab {
-    margin-top: 20px;
-    padding: 20px;
+.loc_tab {
+    margin-top: 2rem;
+    padding: 2rem;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     border-radius: 10px;
 }
 
-#property-page .loc_tab table {
+.loc_tab table {
     width: 100%;
     border-collapse: collapse;
 }
 
-#property-page .loc_tab th,
-#property-page .loc_tab td {
-    padding: 12px;
+.loc_tab th, .loc_tab td {
+    padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-color);
 }
 
-#property-page .loc_tab th {
-    background-color: #f8f8f8;
-    font-weight: bold;
+.loc_tab th {
+    background-color: var(--light);
+    font-weight: 600;
+    color: var(--primary);
 }
 
-#property-page .loc_tab .no-data {
+.loc_tab .no-data {
     text-align: center;
-    color: #666;
-    padding: 20px;
+    color: var(--secondary);
+    padding: 2rem;
 }
 
-#property-page .loc_tab .no-data p {
-    margin: 10px 0;
+.loc_tab .no-data p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
 }
 
-#property-page .loc_tab .no-data button {
-    padding: 10px 20px;
+.loc_tab .no-data button {
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
-    background-color: #28a745;
+    background-color: var(--primary);
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
 }
 
-#property-page .loc_tab .no-data button:hover {
-    background-color: #218838;
+.loc_tab .no-data button:hover {
+    background-color: #1a5e12;
+    transform: translateY(-2px);
 }
 
 /* ==================== */
 /* Boutons d'action */
 /* ==================== */
-#property-page .action-button {
-    padding: 5px 10px;
+.action-button {
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: var(--secondary);
     color: white;
-    font-size: 14px;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-right: 5px;
+    transition: all 0.3s ease;
+    margin-right: 0.5rem;
 }
 
-#property-page .action-button:hover {
-    background-color: #0056b3;
+.action-button:hover {
+    background-color: #9F8868;
+    transform: translateY(-2px);
 }
 
-#property-page .action-button.restore {
-    background-color: #28a745;
+.action-button.restore {
+    background-color: var(--primary);
 }
 
-#property-page .action-button.restore:hover {
-    background-color: #218838;
+.action-button.restore:hover {
+    background-color: #1a5e12;
 }
 
 /* ==================== */
 /* Formulaire Nouveau Lot */
 /* ==================== */
-#property-page .form-section {
-    margin-top: 20px;
-    padding: 20px;
+.form-section {
+    margin-top: 2rem;
+    padding: 2rem;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     border-radius: 10px;
+    border-left: 4px solid var(--primary);
 }
 
-#property-page .form-group {
-    margin-bottom: 15px;
+.form-group {
+    margin-bottom: 1.5rem;
 }
 
-#property-page .form-group label {
+.form-group label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark);
 }
 
-#property-page .form-group input,
-#property-page .form-group select {
+.form-group input,
+.form-group select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
     box-sizing: border-box;
+    transition: border 0.3s;
 }
 
-#property-page .form-group input:focus,
-#property-page .form-group select:focus {
-    border-color: #28a745;
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary);
     outline: none;
+    box-shadow: 0 0 0 3px rgba(181, 121, 72, 0.2);
 }
 
-#property-page .form-group button {
+.form-group button {
     width: 100%;
-    padding: 10px;
-    background-color: #28a745;
+    padding: 0.75rem;
+    background-color: var(--primary);
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-#property-page .form-group button:hover {
-    background-color: #218838;
+.form-group button:hover {
+    background-color: #1a5e12;
+    transform: translateY(-2px);
+}
+
+/* ==================== */
+/* Responsive */
+/* ==================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .loc_choice {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .loc_choice .title {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .loc_choice .buttons {
+        flex-wrap: wrap;
+    }
+    
+    .loc_choice .new-location {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .loc_tab, .form-section {
+        padding: 1rem;
+    }
+    
+    .loc_tab th, .loc_tab td {
+        padding: 0.75rem;
+    }
 }

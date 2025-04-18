@@ -55,7 +55,7 @@ try {
             $stmt->execute([':id' => $id]);
 
             // Redirection après suppression
-            header('Location: ../index.php?success=1');
+            header('Location: ./properties.php');
             exit;
         } else {
             die("Erreur : Lot non trouvé.");

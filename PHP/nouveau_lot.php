@@ -9,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Property</title>
-    <link rel="stylesheet" href="../CSS/property.css">
+    <link rel="stylesheet" href="../CSS/lot.css">
     <style>
         .image-preview {
             display: flex;

@@ -13,8 +13,8 @@ $properties = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rental Management</title>
+    <!-- Inclure d'abord common.css (si utilisé), puis header.css, puis property.css -->
     <link rel="stylesheet" href="../CSS/property.css">
-
     <script>
         // Confirm before deleting a property
         function confirmDelete(id) {
@@ -29,18 +29,14 @@ $properties = $stmt->fetchAll(PDO::FETCH_ASSOC);
             font-size: 0.8em;
             color: #666;
         }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
-
 <body id="property-page">
-<?php include('header.php'); ?>
+    <?php include('header.php'); ?>
+    
+    <!-- Espace pour compenser le header fixe -->
+    <div class="header-space"></div>
+    
     <!-- Rental tabs: Active / Archived -->
     <div class="loc_choice">
         <div class="title">Rentals</div>
@@ -73,7 +69,7 @@ $properties = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <tr class="no-data">
                         <td colspan="10">
                             <p>Nothing here yet: this page is used to manage your rental properties.</p>
-                            <p>If you own 5 properties rented to 5 different tenants, you’ll need to create 5 rental contracts.</p>
+                            <p>If you own 5 properties rented to 5 different tenants, you'll need to create 5 rental contracts.</p>
                             <p>For each contract, rents and receipts are automatically generated under the Finance section.</p>
                             <button class="new-location" onclick="window.location.href='nouveau_lot.php'">Create New Rental</button>
                         </td>

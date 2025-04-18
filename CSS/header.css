@@ -1,44 +1,98 @@
-/* Assurer que le header prenne toute la largeur de la page */
-header {
+/* ==================== */
+/* HEADER STYLES */
+/* ==================== */
+
+/* Base Header Styles */
+body > header {
     font-family: 'Poppins', sans-serif;
     background-color: #f7f4e3;
-    width: 100%; /* Pour que le header prenne toute la largeur */
-    padding: 20px 30px; /* Padding plus large pour rendre le header plus grand */
-    box-sizing: border-box; /* Assurer que le padding ne dépasse pas la largeur */
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-/* Container du nav : flexbox pour aligner correctement les éléments */
-header nav {
+/* Navigation Container */
+body > header nav {
     display: flex;
-    justify-content: space-between; /* Espacement entre les éléments */
+    justify-content: space-between;
     align-items: center;
-    width: 100%; /* Le nav doit aussi prendre toute la largeur du header */
-    padding: 0; /* Enlever le padding supplémentaire */
+    width: 100%;
+    padding: 0;
 }
 
-/* Logo du header */
-header h1 {
-    font-size: 28px; /* Augmenter la taille du logo */
+/* Logo Styles */
+body > header h1 {
+    font-size: 28px;
     color: #000000;
     margin: 0;
-}
-
-/* Liens de la navbar */
-header .nav-link {
-    color: #B57948;
-    margin-right: 20px; /* Espacement entre les liens */
-    transition: color 0.3s ease, transform 0.3s ease;
     text-align: left;
-    padding: 5px 0; /* Padding pour les liens */
 }
 
-/* Sidebar */
-header .more-about-container {
+/* ==================== */
+/* NAVIGATION LINKS */
+/* ==================== */
+body > header .nav-link {
+    position: relative;
+    color: #B57948 !important;
+    margin-right: 20px;
+    padding: 5px 0;
+    text-align: left;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+/* Underline Animation */
+body > header .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: #B57948;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+body > header .nav-link:hover {
+    color: #9F8868 !important;
+    transform: translateY(-2px);
+}
+
+body > header .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* ==================== */
+/* PROFILE BUTTON */
+/* ==================== */
+body > header .profile-btn {
+    background-color: #29720E;
+    padding: 8px 16px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body > header .profile-btn:hover {
+    background-color: #1a5e12;
+    transform: scale(1.05);
+}
+
+/* ==================== */
+/* SIDEBAR STYLES */
+/* ==================== */
+body > header .more-about-container {
     position: relative;
     display: inline-block;
 }
 
-header .sidebar {
+body > header .sidebar {
     position: absolute;
     top: calc(100%);
     left: 50%;
@@ -51,11 +105,11 @@ header .sidebar {
     z-index: 1000;
 }
 
-header .more-about-container:hover .sidebar {
+body > header .more-about-container:hover .sidebar {
     display: block;
 }
 
-header .sidebar a {
+body > header .sidebar a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
@@ -63,55 +117,25 @@ header .sidebar a {
     transition: background-color 0.3s ease;
 }
 
-header .sidebar a:hover {
+body > header .sidebar a:hover {
     background-color: rgba(229, 232, 235, 0.3);
 }
 
-/* Pour éviter le centrage du texte sur la page investissement */
-header h1, header .nav-link, header .profile-btn {
-    text-align: left;
-}
-
-header .nav-link:hover {
-    color: #9F8868;
-    transform: translateY(-2px);
-}
-
-/* Style pour le bouton du profile */
-header .profile-btn {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    background-color: #29720E;
-    padding: 8px 16px;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
-}
-
-header .profile-btn:hover {
-    background-color: #1a5e12;
-    transform: scale(1.05);
-}
-
-/* Pour que la navbar ne soit pas centrée, on s'assure que tout est bien à gauche */
-header .nav-link, header .profile-btn {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-/* Réponse pour petits écrans */
+/* ==================== */
+/* RESPONSIVE STYLES */
+/* ==================== */
 @media (max-width: 768px) {
-    header .sidebar {
-        width: 200px;
-    }
-
-    /* Adapter les espacements et alignements en fonction de la taille de l'écran */
-    header nav {
+    body > header nav {
         flex-direction: column;
-        align-items: flex-start; /* Aligner les éléments à gauche */
+        align-items: flex-start;
         padding: 10px 15px;
     }
 
-    header h1 {
-        font-size: 24px; /* Taille du logo plus petite pour les petits écrans */
+    body > header h1 {
+        font-size: 24px;
+    }
+
+    body > header .sidebar {
+        width: 200px;
     }
 }
