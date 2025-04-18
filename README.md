@@ -40,7 +40,7 @@ Des fonctionnalités supplémentaires sont prévues dans les prochaines étapes 
 ### 2. Installation
 
 1. Cloner ou télécharger le projet dans le dossier `htdocs` (ou équivalent) de votre serveur local.
-2. Importer le fichier `BDD.sql` (fourni dans le projet) dans **phpMyAdmin** pour créer la base de données.
+2. Importer le fichier `imobillier.sql` (fourni dans le projet) dans **phpMyAdmin** pour créer la base de données.
 3. Modifier le fichier `connexionBDD.php` avec vos identifiants de base de données.
    ```php
    $conn = new PDO("mysql:host=localhost;dbname=immobilier_db", "root", "");
